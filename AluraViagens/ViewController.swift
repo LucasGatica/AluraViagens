@@ -16,6 +16,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
         viagensTableVIew.dataSource = self
+        viagensTableVIew.delegate = self
     }
     
     
@@ -36,5 +37,22 @@ extension ViewController: UITableViewDataSource{
         return cell
     }
     
-}		
+}	
+
+
+extension ViewController: UITableViewDelegate{
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = Bundle.main.loadNibNamed("HomeTableViewHeader", owner: self, options: nil)?.first as? HomeTableViewHeader
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 300
+    }
+    
+}
 
