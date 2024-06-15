@@ -32,23 +32,35 @@
                         <constraint firstAttribute="height" constant="250" id="LpW-AZ-3vf"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-df-VKF" userLabel="banner view">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-df-VKF">
                     <rect key="frame" x="9" y="130" width="375" height="130"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-ii-Yop">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-ii-Yop">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
                             <color key="backgroundColor" name="verdeclaro"/>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-ji-lJc">
-                            <rect key="frame" x="199" y="0.0" width="176" height="128"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-ji-lJc">
+                            <rect key="frame" x="199" y="0.0" width="176" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="QjS-O8-5pZ"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2Nu-ii-Yop" secondAttribute="bottom" id="2cO-Ea-w4k"/>
+                        <constraint firstItem="2Nu-ii-Yop" firstAttribute="width" secondItem="HVb-df-VKF" secondAttribute="width" multiplier="0.533333" id="CIe-Ho-YOa"/>
+                        <constraint firstItem="2Nu-ii-Yop" firstAttribute="leading" secondItem="HVb-df-VKF" secondAttribute="leading" id="Pn5-xz-sNd"/>
+                        <constraint firstAttribute="bottom" secondItem="SLe-ji-lJc" secondAttribute="bottom" id="bxD-PV-G1O"/>
+                        <constraint firstItem="2Nu-ii-Yop" firstAttribute="top" secondItem="HVb-df-VKF" secondAttribute="top" id="h5v-8r-cgg"/>
+                        <constraint firstAttribute="trailing" secondItem="SLe-ji-lJc" secondAttribute="trailing" id="hDO-57-T5H"/>
+                        <constraint firstItem="SLe-ji-lJc" firstAttribute="width" secondItem="HVb-df-VKF" secondAttribute="width" multiplier="0.469333" id="hxN-V3-iky"/>
+                        <constraint firstItem="SLe-ji-lJc" firstAttribute="top" secondItem="HVb-df-VKF" secondAttribute="top" id="koh-ds-xpR"/>
                         <constraint firstAttribute="height" constant="130" id="ymP-hl-goN"/>
                     </constraints>
+                    <string key="userLabel" base64-UTF8="YES">
+CQk
+</string>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
